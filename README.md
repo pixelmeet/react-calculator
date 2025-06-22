@@ -257,4 +257,4 @@ If you have any questions or need help:
 
 **Built with ❤️ using React and Vite**
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/react-calculator)
+[![Demo](https://6858782a70bccbb139a00188--musical-croissant-e969ee.netlify.app/)
