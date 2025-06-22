@@ -45,7 +45,7 @@ A comprehensive, modern engineering calculator built with React and Vite. Featur
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/pixelmeet/react-calculator.git
    cd react-calculator
    ```
 
