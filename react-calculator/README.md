@@ -2,6 +2,8 @@
 
 A comprehensive, modern engineering calculator built with React and Vite. Features multiple calculation modes, scientific functions, unit conversions, and a beautiful responsive UI.
 
+![Engineering Calculator](https://img.shields.io/badge/React-18.3.1-blue) ![Vite](https://img.shields.io/badge/Vite-6.3.5-purple) ![Netlify](https://img.shields.io/badge/Netlify-Ready-green)
+
 ## ✨ Features
 
 ### 🎯 Multiple Calculator Modes
@@ -69,26 +71,48 @@ A comprehensive, modern engineering calculator built with React and Vite. Featur
 
 ## 🌐 Deployment
 
-### Netlify Deployment
+### Netlify Deployment (Recommended)
 
-This project is configured for easy deployment on Netlify:
+This project is configured for easy deployment on Netlify with proper MIME type handling:
 
-1. **Connect your repository** to Netlify
-2. **Build settings** (automatically detected):
+#### Option A: Git Integration
+1. **Push your code** to GitHub/GitLab/Bitbucket
+2. **Go to [Netlify](https://app.netlify.com/)**
+3. **Click "Add new site" > "Import an existing project"**
+4. **Connect your repository**
+5. **Build settings** (automatically detected):
    - Build command: `npm run build`
    - Publish directory: `dist`
    - Node version: 18
+6. **Click "Deploy site"**
 
-3. **Deploy** - Netlify will automatically build and deploy your site
-
-### Manual Deployment
-
+#### Option B: Manual Upload
 1. **Build the project**
    ```bash
    npm run build
    ```
+2. **Upload the `dist` folder** to Netlify
 
-2. **Upload the `dist` folder** to your hosting provider
+### Troubleshooting Deployment Issues
+
+#### MIME Type Error Fix
+If you encounter this error:
+```
+Failed to load module script: Expected a JavaScript-or-Wasm module script but the server responded with a MIME type of "application/octet-stream"
+```
+
+**Solutions:**
+1. **Verify Netlify Settings**:
+   - Publish directory: `dist` (not `public` or root)
+   - Build command: `npm run build`
+2. **Check Build Output**: Ensure `dist/index.html` exists
+3. **Clear Cache**: Clear Netlify cache and redeploy
+4. **Check Headers**: The `netlify.toml` includes proper MIME type headers
+
+#### Common Issues
+- **Files not found**: Deploy from `dist` folder, not source code
+- **Build fails**: Ensure all dependencies are in `package.json`
+- **Routing issues**: `_redirects` file handles SPA routing
 
 ## 🎯 Usage
 
@@ -113,10 +137,10 @@ This project is configured for easy deployment on Netlify:
 
 ## 🛠️ Technology Stack
 
-- **React 18** - UI framework
-- **Vite** - Build tool and dev server
-- **Math.js** - Mathematical library
-- **Lucide React** - Icon library
+- **React 18.3.1** - UI framework
+- **Vite 6.3.5** - Build tool and dev server
+- **Math.js 12.4.0** - Mathematical library
+- **Lucide React 0.263.1** - Icon library
 - **CSS3** - Styling with modern features
 
 ## 📱 Responsive Design
@@ -134,6 +158,24 @@ The calculator is fully responsive and works on:
 - **Professional color scheme**
 - **Intuitive navigation** with icons
 - **Accessibility features** with proper focus management
+
+## 🔧 Project Structure
+
+```
+react-calculator/
+├── src/
+│   ├── App.jsx          # Main calculator component
+│   ├── App.css          # Calculator styles
+│   ├── main.jsx         # React entry point
+│   └── index.css        # Global styles
+├── public/
+│   ├── _redirects       # Netlify redirects
+│   └── vite.svg         # App icon
+├── netlify.toml         # Netlify configuration
+├── vite.config.js       # Vite configuration
+├── package.json         # Dependencies and scripts
+└── README.md           # This file
+```
 
 ## 🔧 Customization
 
@@ -154,6 +196,41 @@ else if (fromUnit === 'newUnit' && toUnit === 'targetUnit')
   result = conversionFormula(numValue);
 ```
 
+## 📋 Development
+
+### Local Development
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Code Quality
+```bash
+# Run ESLint
+npm run lint
+```
+
+## 🐛 Troubleshooting
+
+### Build Issues
+1. **Clear node_modules**: `rm -rf node_modules && npm install`
+2. **Clear cache**: `npm run build -- --force`
+3. **Check Node version**: Ensure Node.js 18+ is installed
+
+### Runtime Issues
+1. **Check browser console** for JavaScript errors
+2. **Verify dependencies** are properly installed
+3. **Clear browser cache** and reload
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
@@ -162,10 +239,22 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+### Development Setup
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
 ## 📞 Support
 
-If you have any questions or need help, please open an issue on GitHub.
+If you have any questions or need help:
+- Open an issue on GitHub
+- Check the [DEPLOYMENT.md](DEPLOYMENT.md) for deployment help
+- Review the troubleshooting section above
 
 ---
 
 **Built with ❤️ using React and Vite**
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/react-calculator)
