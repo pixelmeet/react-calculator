@@ -2,7 +2,11 @@
 
 A comprehensive, modern engineering calculator built with React and Vite. Features multiple calculation modes, scientific functions, unit conversions, and a beautiful responsive UI.
 
+[![Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Click%20Here-brightgreen?style=for-the-badge)](https://6858782a70bccbb139a00188--musical-croissant-e969ee.netlify.app/)
+
 ![Engineering Calculator](https://img.shields.io/badge/React-18.3.1-blue) ![Vite](https://img.shields.io/badge/Vite-6.3.5-purple) ![Netlify](https://img.shields.io/badge/Netlify-Ready-green)
+
+
 
 ## ✨ Features
 
@@ -256,5 +260,3 @@ If you have any questions or need help:
 ---
 
 **Built with ❤️ using React and Vite**
-
-[![Demo](https://6858782a70bccbb139a00188--musical-croissant-e969ee.netlify.app/)
